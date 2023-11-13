@@ -53,15 +53,17 @@ export default function CategoryPage() {
 
         <div>
           <h1 className="font-medium text-lg">Filter by price</h1>
-          {"0"}
-          <input
-            type="range"
-            min={0}
-            max={1000}
-            onChange={(e) => setRangePrice(e.target.value)}
-            className="py-2"
-          />
-          {` ${rangePrice}`}
+          <div className="flex items-center gap-1">
+            {"0"}
+            <input
+                type="range"
+                min={0}
+                max={1000}
+                onChange={(e) => setRangePrice(e.target.value)}
+                className="py-2"
+            />
+            {` ${rangePrice}`}
+          </div>
         </div>
         <div>
           <h1 className="font-medium text-lg">Sort by</h1>
@@ -91,9 +93,9 @@ export default function CategoryPage() {
       <div className="w-[75%]">
         <div className="h-[350px] mb-8 relative">
           <img
-            src="https://images.unsplash.com/photo-1494607239400-ff147da48308?auto=format&fit=crop&q=80&w=2059&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/photo-1508427953056-b00b8d78ebf5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
           <span className="absolute inline-block top-4 left-4 text-5xl text-white font-bold">{collectionName || "All Products"}</span>
         </div>
